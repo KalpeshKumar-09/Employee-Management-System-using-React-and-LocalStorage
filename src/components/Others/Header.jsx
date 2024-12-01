@@ -1,19 +1,8 @@
-// import { useState } from "react";
-
-const Header = () => {
-  // const [username, setUserName] = useState("");
-
-  // if (!data) {
-  //   setUserName("Admin");
-  // } else {
-  //   setUserName(data.name);
-  // }
-
-  // console.log(data);
-
+const Header = (props) => {
   const logout = () => {
     localStorage.setItem("loggedInUser", "");
-    window.location.reload();
+    props.changeUser("");
+    // window.location.reload();
   };
 
   return (
